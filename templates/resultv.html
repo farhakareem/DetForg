@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block main %}
+<!--<h1>result={{res}}</h1> 
+<h1>filename : {{filename}}</h1>-->
+
+<div style="width :fit-content; margin: 0 auto;">
+  <h4><b>Video Forgery Type : {{msg}}</b></h1>
+  <video controls>
+    <source src="{% static 'C:\Users\PC\projects\detforg\static\det5.mp4' type='video/mp4' %}">
+  Your browser does not support the video tag.
+  </video>
+  <h5><i>Video contouring the forged region</i> </h5>
+  
+</div>
+{% endblock %}

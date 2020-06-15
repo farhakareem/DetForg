@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+{% block main %}
+
+         
+
+  <form action="add" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="video"><br><br>
+    <div class="form-group">
+      <label for="num1">Enter Width</label>
+      <input type="number" name="num1" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="num2">Enter Height</label>
+      <input type="number" name="num2" class="form-control">
+    </div>
+   
+    <button type="submit" class="btn btn-primary">
+      <span class="spinner-border spinner-border-sm hide" role="status" aria-hidden="true"></span>
+      <span class="btn-txt">SUBMIT</span>
+    </button>
+  </form>
+  
+  <!--<h1>result={{name}}</h1>--> 
+  <!--<form action="add">
+   <input type="file" name="video"><br>
+   <label for="numone">Enter Width:</label><br>
+    <input type="number" name="num1"> <br>
+    <label for="numtwo">Enter Height:</label><br>
+    <input type="number" name="num2"> <br>
+    <button type="submit" class="btn btn-primary">Submit</button>-->
+
+</form>
+    </div>
+</div>
+{% endblock %}

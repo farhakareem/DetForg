@@ -1,0 +1,34 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block main %}
+<!--<h1>result={{res}}</h1> 
+<h1>filename : {{filename}}</h1>-->
+<h4>Video Forgery Type : {{msg}}</h1>
+<div>
+  <video width="295" height="240" controls>
+    <source src="{% static 'C:\Users\PC\projects\detforg\static\Original.mp4' type='video/mp4' %}">
+  Your browser does not support the video tag.
+  </video>
+  &emsp; &emsp;
+
+  <video width="295" height="240" controls>
+    <source src="{% static 'C:\Users\PC\projects\detforg\static\Duplicated.mp4' type='video/mp4' %}">
+  Your browser does not support the video tag.
+  </video>
+</div>
+<div id="vidnam">
+    <h2> &nbsp; &emsp; Original Video      &emsp; &emsp; &emsp; 
+        Duplicated Video</h2>
+    </div>
+    <div class="card" style="width: 18.40rem;">
+        <video width="295" height="240" controls>
+            <source src="{% static 'C:\Users\PC\projects\detforg\static\Duplicated.mp4' type='video/mp4' %}">
+          Your browser does not support the video tag.
+          </video>
+        <div action="tri" class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a action="tri" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+{% endblock %}
