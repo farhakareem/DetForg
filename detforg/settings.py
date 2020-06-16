@@ -27,7 +27,6 @@ SECRET_KEY = 'nx2gycvsf21y^%j5924i_0=7mp9vbq!6$g_s*h*@l&w2qbre48'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "detforg.pythonanywhere.com"
 ]
 
 
