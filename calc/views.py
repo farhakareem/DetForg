@@ -19,7 +19,7 @@ def add(request):
     width=int(request.POST['num1'])
     height=int(request.POST['num2'])  
     filenam = request.FILES.get('video').name
-    filename=os.path.join("c:/Users/PC/projects/detforg/calc/",filenam)
+    filename=os.path.join("/app/detforg/calc/",filenam)
     #res=height+width
     if filenam=="05_forged.mp4":
         res=videob(filename)
