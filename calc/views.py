@@ -18,6 +18,7 @@ def home(request):
 def add(request):
     width=int(request.POST['num1'])
     height=int(request.POST['num2'])  
+    myfile = request.FILES['video']
     filenam = request.FILES.get('video').name
     filename=os.path.join("/app/calc/",filenam)
     #res=height+width

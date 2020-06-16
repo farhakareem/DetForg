@@ -2,3 +2,10 @@ libsm6
 libxrender1
 libfontconfig1
 libice6
+build-essential
+gfortran
+python-all-dev
+python3-all-dev
+liblapack-dev
+libatlas-base-dev
+cython
