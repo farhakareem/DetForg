@@ -20,7 +20,7 @@ def add(request):
     height=int(request.POST['num2'])  
     myfile = request.FILES['video']
     filenam = request.FILES.get('video').name
-    filename=os.path.join("/app/calc/",filenam)
+    filename=os.path.join(BASE_DIR,filenam)
     #res=height+width
     if filenam=="05_forged.mp4":
         res=videob(filename)
