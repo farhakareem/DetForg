@@ -1,1 +1,1 @@
-web: gunicorn detforg.wsgi --timeout 5000
+web: waitress-serve --connection-limit 2000 --channel-timeout=500 detforg.wsgi --timeout 5000
