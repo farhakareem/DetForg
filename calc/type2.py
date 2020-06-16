@@ -137,8 +137,8 @@ def type2(yuv_filename,width,height):
     '''
     if DF_:
         f = open(yuv_filename, 'rb')
-        o = open('c:/Users/PC/projects/detforg/static/Original_.yuv', 'wb')
-        d = open('c:/Users/PC/projects/detforg/static/Duplicated_.yuv', 'wb')
+        o = open('/app/static/Original_.yuv', 'wb')
+        d = open('/app/static/Duplicated_.yuv', 'wb')
         fr_count=0
         fr_size=int(width*height*1.5)
         while fr_count<n_frames:
@@ -151,10 +151,10 @@ def type2(yuv_filename,width,height):
         d.close()
         o.close()
         f.close()
-        sp.run('c:/Users/PC/projects/detforg/calc/ffmpeg -y -s {}x{} -pixel_format yuv420p -i c:/Users/PC/projects/detforg/static/Original_.yuv -vcodec libx264 -crf 17 -pix_fmt yuv420p c:/Users/PC/projects/detforg/static/Original_.mp4'.format(width, height))
-        sp.run('c:/Users/PC/projects/detforg/calc/ffmpeg -y -s {}x{} -pixel_format yuv420p -i c:/Users/PC/projects/detforg/static/Duplicated_.yuv -vcodec libx264 -crf 17 -pix_fmt yuv420p c:/Users/PC/projects/detforg/static/Duplicated_.mp4'.format(width, height))
-        os.remove('c:/Users/PC/projects/detforg/static/Original_.yuv')
-        os.remove('c:/Users/PC/projects/detforg/static/Duplicated_.yuv')
+        sp.run('/app/calc/ffmpeg -y -s {}x{} -pixel_format yuv420p -i /app/static/Original_.yuv -vcodec libx264 -crf 17 -pix_fmt yuv420p /app/static/Original_.mp4'.format(width, height))
+        sp.run('/app/calc/ffmpeg -y -s {}x{} -pixel_format yuv420p -i /app/static/Duplicated_.yuv -vcodec libx264 -crf 17 -pix_fmt yuv420p /app/static/Duplicated_.mp4'.format(width, height))
+        os.remove('/app/static/Original_.yuv')
+        os.remove('/app/static/Duplicated_.yuv')
         msg="Type 2 Forgery - Smooth Insertion Copy-Move"
         print(msg)
         print(DF_)
